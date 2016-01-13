@@ -47,6 +47,7 @@ def scaleImage(image, width=None, height=None, direction="down",
 
     if isinstance(image, str):
         image=StringIO(image)
+    image.seek(0)
     image=PIL.Image.open(image)
 
     if image.mode=="1":
